@@ -81,8 +81,8 @@ DTSDumper.prototype.computeTypeReplacements = function() {
 
     // Default replacements
     this.typeReplacements['String'] = 'string';
-    this.typeReplacements['Int'] = 'integer';
-    this.typeReplacements['UInt'] = 'integer';
+    this.typeReplacements['Int'] = 'number';
+    this.typeReplacements['UInt'] = 'number';
     this.typeReplacements['Float'] = 'number';
     this.typeReplacements['Bool'] = 'boolean';
     this.typeReplacements['Array<Dynamic>'] = 'Array<any>';
