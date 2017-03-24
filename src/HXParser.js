@@ -125,9 +125,9 @@ HXParser.prototype.cleanupHaxe = function() {
             i += 2;
         }
         else if (hx.charAt(0).trim() == '') {
-            if (numberOfOpenLts <= 0) {
+            //if (numberOfOpenLts <= 0) { // bug: if(some_value < 10) <--- from this point on, it trims until the end of file
                 newInput += hx.charAt(0);
-            }
+            //}
             i++;
         }
         else if ((hx.charAt(0) == '\'' || hx.charAt(0) == '"') && ((REGEX_QUOTED_STRING.lastIndex = -1) && (matches = hx.match(REGEX_QUOTED_STRING)))) {
