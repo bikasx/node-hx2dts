@@ -125,7 +125,7 @@ HXParser.prototype.cleanupHaxe = function() {
             i += 2;
         }
         else if (hx.charAt(0).trim() == '') {
-            //if (numberOfOpenLts <= 0) { // bug: if(some_value < 10) <--- from this point on, it trims until the end of file
+            //if (numberOfOpenLts <= 0) { // bug: if(some_value < 10) <--- from "<" it trims until the end of file or until ">", might introduce bug while cleaning up Array< Stuff > (won't trim spaces anymore)
                 newInput += hx.charAt(0);
             //}
             i++;
